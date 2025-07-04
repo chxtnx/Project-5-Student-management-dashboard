@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 15%;
+  background: #1B3C53;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1rem;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.school-name {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebar input,
+.sidebar select,
+.sidebar button {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.sidebar input,
+.sidebar select {
+  background: #57606f;
+  color: white;
+}
+
+.sidebar button {
+  background: #387478;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sidebar label {
+  margin-top: 10px;
+}
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+table td button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  background: #387478;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+table td button:hover {
+  background: #2c5a60;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+th {
+  background: #f1f3f5;
+  font-weight: 600;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #387478;
+  color: white;
+  font-size: 28px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.no-data {
+  display: none;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #2f3542;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.modal input,
+.modal select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+.modal .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.modal button[type="submit"] {
+  padding: 10px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+button {
+  transition: all 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .add-btn {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+.logo img {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
